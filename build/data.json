@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "source": "twitter",
+      "text": "text1"
+    },
+    {
+      "source": "hh",
+      "text": "text2"
+    },
+    {
+      "source": "facebook",
+      "text": "text3"
+    }
+  ]
+}

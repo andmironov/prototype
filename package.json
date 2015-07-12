@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/andmironov/nii_education",
   "dependencies": {
-    "oauth": "^0.9.13",
+    "fs": "0.0.2",
+    "jsonfile": "^2.2.1",
     "react": "^0.13.2",
+    "redis": "^0.12.1",
     "superagent": "^1.2.0"
   },
   "devDependencies": {

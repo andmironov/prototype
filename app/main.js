@@ -1,49 +1,45 @@
-let React = require('react');
-let request = require('superagent');
-let Tweet = require('./tweet.js');
+let React = require("react");
+let Item = require("./item.js");
+let request = require("superagent");
+let styles = require("./less/main.less");
 
-let App = React.createClass({
+var ItemList = React.createClass({
+    getInitialState: function() {
+        return {
+          items:[]
+      }
+    },
 
-  getInitialState: function(){
-    return {
-      authorUsername: "Andrei",
-      tweetText: "Mironov"
-    }
-  },
+    componentDidMount: function() {
+      request
+        .get("/data.json")
+        .end((err, res) => {
+            if(err) console.error(err);
+            if (this.isMounted()) {
+              this.setState({items: res.body.items});
+            }
+        });
+    },
 
-  fetchTweet: function(){
-    request
-      .get("https://api.twitter.com/1.1/statuses/show.json")
-      .query({
-        id:"598082126190379008"
+    render: function() {
+      var items = this.state.items.map(function(item){
+        return (
+          <li key={item.text}>
+            <h2>{item.source}</h2>
+            <p>{item.text}</p>
+          </li>
+        )
       })
-      .auth({
-        oauth_consumer_key: "dmXpNAQ17kCjcj2VjXpvq2uPj",
-        oauth_nonce: "885266bf7a5f053cd5f4cbd24d07aff6",
-        oauth_signature: "k%2F5Xb25HY3H80jwlkFcPpnbQDuc%3D",
-        oauth_signature_method: "HMAC-SHA1",
-        oauth_timestamp: "1433105677",
-        oauth_token: "43619868-NFfHkwv0IuOEAJydPO732PrWwtRUXUfIbyieEiEtJ",
-        oauth_version: "1.0"
-      })
-      .end(function(err, res){
-        if (res.ok) {
-          console.log(JSON.stringify(res.body))
-        } else {
-          console.log("err");
-        }
-      });
 
-  },
-
-  render: function() {
-    return (
-      <div>
-        <Tweet authorUsername={this.state.authorUsername} tweetText={this.state.tweetText}/>
-        <input type="button" onClick={this.fetchTweet} value="Hi"/>
-      </div>
-    )
-  }
+      return (
+        <div>
+        <h2>There are {items.length} items in the item list</h2>
+        <ul>
+          {items}
+        </ul>
+        </div>
+      )
+ }
 });
 
-React.render(<App surname="Mironov"/>, document.body);
+React.render(<ItemList />, document.body);
