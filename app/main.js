@@ -1,45 +1,46 @@
 let React = require("react");
 let Item = require("./item.js");
+var ItemsStore = require('stores/ItemsStore.js');
+
 let request = require("superagent");
 let styles = require("./less/main.less");
 
-var ItemList = React.createClass({
-    getInitialState: function() {
-        return {
-          items:[]
-      }
-    },
+function getItemsState() {
+  return {
+    allItems: ItemsStore.getAll()
+  }
+}
 
-    componentDidMount: function() {
-      request
-        .get("/data.json")
-        .end((err, res) => {
-            if(err) console.error(err);
-            if (this.isMounted()) {
-              this.setState({items: res.body.items});
-            }
-        });
-    },
+var RemoteJobsApp = React.createClass({
 
-    render: function() {
-      var items = this.state.items.map(function(item){
-        return (
-          <li key={item.text}>
-            <h2>{item.source}</h2>
-            <p>{item.text}</p>
-          </li>
-        )
-      })
+  getInitialState: function() {
+    return getTodoState();
+  },
 
-      return (
-        <div>
-        <h2>There are {items.length} items in the item list</h2>
-        <ul>
-          {items}
-        </ul>
-        </div>
-      )
- }
+  componentDidMount: function() {
+    ItemsStore.addChangeListener(this._onChange);
+  },
+
+  componentWillUnmount: function() {
+    ItemsStore.removeChangeListener(this._onChange);
+  },
+
+  render: function() {
+    return (
+      <div>
+        <Header />
+        <MainSection
+          allTodos={this.state.allTodos}
+          areAllComplete={this.state.areAllComplete}
+        />
+        <Footer allTodos={this.state.allTodos} />
+      </div>
+    );
+  },
+
+  _onChange: function() {
+    this.setState(getTodoState());
+  }
 });
 
-React.render(<ItemList />, document.body);
+module.exports = RemoteJobsApp;
