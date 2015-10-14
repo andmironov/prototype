@@ -1,7 +1,8 @@
-let Dispatcher = require("./Dispatcher.js");
-let ItemConstants = require("./ItemConstants.js");
-var EventEmitter = require('events').EventEmitter;
-var AppDispatcher = new Dispatcher();
+let Dispatcher = require("../Dispatcher.js");
+let ItemConstants = require("../constants/ItemConstants.js");
+let EventEmitter = require('events').EventEmitter;
+let AppDispatcher = new Dispatcher();
+let assign = require('object-assign');
 
 var CHANGE_EVENT = 'change';
 
@@ -64,5 +65,5 @@ var ItemsStore = assign({}, EventEmitter.prototype, {
   })
 
 })
-
+console.log(ItemsStore.dispatcherIndex)
 module.exports = ItemsStore;
