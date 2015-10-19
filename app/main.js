@@ -1,6 +1,10 @@
 let React = require("react");
 var ReactDOM = require('react-dom');
 let Item = require("./item.js");
+
+var ItemsStore = require('./stores/ItemsStore.js');
+let request = require("superagent");
+
 let styles = require("./less/main.less");
 
 function getItemsState() {
