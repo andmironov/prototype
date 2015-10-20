@@ -24,32 +24,26 @@ body {
   overflow: hidden;
 }
 
-.icon-heart.active .icon-heart--shadow1  {
-  //-webkit-animation: scaleShadow 1.6s ease-out;
+.icon-heart.active .icon-heart--shadow  {
+  -webkit-animation: scaleShadow 2s ease ;
   -webkit-animation-fill-mode: forwards;
-  -webkit-animation-delay: .45s;
-}
-
-.icon-heart.active .icon-heart--shadow2  {
-  //-webkit-animation: scaleShadow 1.6s ease-out;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-delay: 1.2s;
+  -webkit-animation-delay: .3s;
 }
 
 .icon-heart.active .icon-heart--big  {
-  -webkit-animation: scaleBigHeart 1.5s ease-out ;
+  -webkit-animation: scaleHeart .6s ease-out ;
   -webkit-animation-fill-mode: forwards;
   -webkit-animation-delay: .2s;
 }
 
 .icon-heart.active .icon-heart--mid  {
-  -webkit-animation: scaleHeart 1.5s ease-out ;
+  -webkit-animation: scaleHeart .4s ease-out ;
   -webkit-animation-fill-mode: forwards;
   -webkit-animation-delay: .1s;
 }
 
 .icon-heart.active .icon-heart--small  {
-  -webkit-animation: scaleSmallHeart 1.5s ease-out ;
+  -webkit-animation: scaleHeart .4s ease-out ;
   -webkit-animation-fill-mode: forwards;
   -webkit-animation-delay: 0s;
 }
@@ -77,7 +71,7 @@ body {
   left: 50%;
   margin: -40px 0 0 -40px;
   background-color: transparent;
-    box-shadow: 0px 0px 33px 0px rgba(184,41,41,0.90);
+  //box-shadow: 0px 0px 33px 0px rgba(184,41,41,0.90);
 }
 
 .icon-heart--shadow {
@@ -90,7 +84,7 @@ body {
   top: 50%;
   left: 50%;
   margin: -82px 0 0 -90px;
-  opacity: .4;
+  opacity: .2;
   transform: translate3d(0, 0, 0);
   transition: transform .5s ease, opacity .5s ease;
 }
@@ -122,63 +116,20 @@ body {
 }
 
 
-@-webkit-keyframes scaleSmallHeart {
-  20% {
-     transform: scale(1.4);
-  }
-  40% {
-     transform: scale(1.1);
-  }
-  50% {
-     transform: scale(1.1);
-  }
-  70% {
-     transform: scale(1.4);
-  }
-  100% {
-     transform: scale(1);
-  }
-}
-
 @-webkit-keyframes scaleHeart {
-  20% {
-     transform: scale(1.2);
-  }
-  40% {
-     transform: scale(1);
-  }
   50% {
-     transform: scale(1);
-  }
-  70% {
-     transform: scale(1.2);
+     transform: rotate(0) translate3d(0%, 0%, 0) scale(1.2);
+     opacity: 1;
   }
   100% {
-     transform: scale(1);
-  }
-}
-
-@-webkit-keyframes scaleBigHeart {
-  20% {
-     transform: scale(1.1);
-  }
-  40% {
-     transform: scale(1);
-  }
-  50% {
-     transform: scale(1);
-  }
-  70% {
-     transform: scale(1.1);
-  }
-  100% {
-     transform: scale(1);
+     transform: rotate(0) translate3d(0%, 0%, 0) scale(1);
+     opacity: 1;
   }
 }
 
 @-webkit-keyframes scaleShadow {
   100% {
-     transform: scale(4);
+     transform: rotate(0) translate3d(0%, 0%, 0) scale(5);
      opacity: 0;
   }
 }

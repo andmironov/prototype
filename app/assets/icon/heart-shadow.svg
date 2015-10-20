@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="90px" height="82px" viewBox="0 0 90 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="iPhone-6-Copy-24" sketch:type="MSArtboardGroup" transform="translate(-355.000000, -259.000000)" fill="#FF4747">
+            <g id="Shape-+-Shape-Copy-+-Shape-Copy-2" sketch:type="MSLayerGroup" transform="translate(355.000000, 259.000000)">
+                <path d="M81.4791745,45.6505337 C92.8282029,34.3439427 92.5861023,17.8641672 82.2675765,7.64062763 C71.9490507,-2.58560162 55.263909,-2.54077333 44.9993834,7.73924986 C34.7357578,-2.54077333 18.0506161,-2.58560162 7.7320903,7.64062763 C-2.58643548,17.8641672 -2.82763608,34.3439427 8.52049227,45.6505337 C21.1871239,58.2679039 41.4524745,78.4648411 44.9993834,82 C48.5489923,78.4648411 68.8116429,58.2679039 81.4791745,45.6505337 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

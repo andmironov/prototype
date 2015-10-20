@@ -24,4 +24,4 @@ var Prototype = React.createClass({
 });
 
 React.render(<Prototype name="John" />, document.querySelectorAll(".app")[0]);
-module.exports = RemoteJobsApp;
+module.exports = Prototype;

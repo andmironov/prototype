@@ -6,16 +6,28 @@ let Item = React.createClass({
   render: function() {
 
     function startAnimation() {
-      //document.querySelectorAll(".phoneBG")[0].classList.add("complete");
+      document.querySelectorAll(".icon-heart")[0].classList.add("active");
+      setTimeout(()=>{
+        document.querySelectorAll(".icon-heart")[0].classList.remove("active");
+      }, 4000)
     }
 
 
     return (
       <div>
-        <div className="icon-bg">
-          <div className="icon-heart"></div>
+        <div className="icon-wrap">
+          <div className="icon-bg">
+            <div className="icon-heart">
+              <div className="icon-heart--glow"></div>
+              <div className="icon-heart--shadow icon-heart--shadow1"></div>
+              <div className="icon-heart--shadow icon-heart--shadow2"></div>
+              <div className="icon-heart--big"></div>
+              <div className="icon-heart--mid"></div>
+              <div className="icon-heart--small"></div>
+            </div>
+          </div>
+          <button onClick={startAnimation}>startAnimation</button>
         </div>
-        <button onClick={startAnimation}>startAnimation</button>
       </div>
     )
   }
