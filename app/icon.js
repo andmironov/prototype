@@ -1,21 +1,24 @@
 let React = require('react');
-let iconStyles = require("./less/icon.less");
+let iconStyles = require("./less/icon4.less");
 
 
 let Item = React.createClass({
   render: function() {
 
-    function startAnimation() {
+    function pushIcon() {
       document.querySelectorAll(".icon-heart")[0].classList.add("active");
-      setTimeout(()=>{
-        document.querySelectorAll(".icon-heart")[0].classList.remove("active");
-      }, 4000)
+    }
+
+    function openScreen() {
+      document.querySelectorAll(".icon-heart")[0].classList.remove("active");
     }
 
 
     return (
       <div>
         <div className="icon-wrap">
+          <div className="icon-shadow"></div>
+          <div className="icon-shadow--2"></div>
           <div className="icon-bg">
             <div className="icon-heart">
               <div className="icon-heart--glow"></div>
@@ -26,7 +29,9 @@ let Item = React.createClass({
               <div className="icon-heart--small"></div>
             </div>
           </div>
-          <button onClick={startAnimation}>startAnimation</button>
+          <div className="screen"></div>
+          <button onClick={pushIcon}>push</button>
+          <button onClick={openScreen}>open</button>
         </div>
       </div>
     )

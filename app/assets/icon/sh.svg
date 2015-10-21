@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="123px" height="59px" viewBox="0 0 123 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Mask Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="2.97162224" in="SourceGraphic" result="blur"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="iPhone-6-Copy-25" sketch:type="MSArtboardGroup" transform="translate(-339.000000, -309.000000)" filter="url(#filter-1)" fill="#C1C1C1">
+            <path d="M383.699999,318 C372.0625,318 368.34375,318 363.09375,318.7 C356.9075,319.575 351.9375,321.563 349.75,324.0375 C348,326.1375 348,327.625 348,332.28 C348,332.28 348,345.719999 348,345.719999 C348,350.375 348,351.8625 349.75,353.9625 C351.941559,356.437 356.9075,358.425 363.09375,359.3 C368.34375,360 372.0625,360 383.699999,360 L417.299997,360 C428.9375,360 432.65625,360 437.90625,359.3 C444.0925,358.425 449.0625,356.437 451.25,353.9625 C453,351.8625 453,350.375 453,345.719999 L453,332.28 C453,327.625 453,326.1375 451.25,324.0375 C449.0625,321.5875 444.022498,319.575 437.897498,318.7 C432.647498,318 428.9375,318 417.299997,318 C423.424997,318 383.699999,318 383.699999,318 Z" id="Mask-Copy" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
