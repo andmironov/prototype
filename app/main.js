@@ -1,6 +1,7 @@
 let React = require("react");
-let Checkout = require("./checkout.js");
-let Icon = require("./icon.js");
+//let Checkout = require("./checkout.js");
+//let Icon = require("./icon.js");
+let Settings = require("./settings.js");
 
 function getItemsState() {
   return {}
@@ -19,7 +20,7 @@ var Prototype = React.createClass({
   },
 
   render: function() {
-    return <Icon/>
+    return <Settings/>
   }
 });
 
