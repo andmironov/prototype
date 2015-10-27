@@ -2,8 +2,8 @@ let React = require("react");
 //let Checkout = require("./checkout.js");
 //let Icon = require("./icon.js");
 //let Settings = require("./settings.js");
-//let Loading = require("./loading.js");
-let Share = require("./share.js");
+let Loading = require("./loading.js");
+//let Share = require("./share.js");
 
 function getItemsState() {
   return {}
@@ -22,7 +22,7 @@ var Prototype = React.createClass({
   },
 
   render: function() {
-    return <Share/>
+    return <Loading/>
   }
 });
 
