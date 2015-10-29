@@ -1,4 +1,4 @@
-@easing: .7s ease-out;
+@easing: .6s ease-out;
 
 //Colors 1
 @bg: white;
@@ -12,52 +12,81 @@ body {
     font-family: Avenir-Roman;
 }
 
-.controls {
-  //display: none;
-}
-
 .loading-wrap {
   position: fixed;
   left: 50%;
   top: 50%;
-  width: 200px;
-  height: 200px;
-  margin: -100px 0 0 -100px;
+  width: 500px;
+  height: 500px;
+  margin: -250px 0 0 -250px;
   background-color: white;
+}
 
+.loading-button {
+  position: relative;
+  width: 212px;
+  height: 44px;
+  text-align: left;
+  background: #FFFFFF;
+  border: 2px solid #E8E8E8;
+  color: #262626;
+  cursor: pointer;
+  transition: all .1s linear;
+}
 
+.loading-button:hover {
+  background: #fff;
+  border: 2px solid #196BFA;
+}
+
+.loading-button:active {
+  background: #E8E8E8;
+}
+
+.loading-button-caption {
+  line-height: 44px;
+  text-transform: uppercase;
+  font-family: Roboto-Medium;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 0 0 0 30px
 }
 
 .loading-dots {
-  width: 100%;
-  height: 5px;
-
-  position: fixed;
-  left: 50%;
-  top: 50%;
+  height: 6px;
+  position: absolute;
+  left: 165px;
+  top: 11px;
   margin: -3px 0 0 -10px;
-
 }
 
 .loading-dot {
-  height: 14px;
-  width: 14px;
+  height: 6px;
+  width: 6px;
   border-radius: 50%;
-  background-color: @activeColor;
+  background-color: #E8E8E8;
   display: inline-block;
-  margin: 0 2px;
-  transition: transform @easing;
-  transform: scale(.6)
+  margin: 0 3px;
+  transition: all @easing;
+  transform: scale(1)
+}
+
+.loading-button:active .loading-dot {
+  background: #D9D9D9;
 }
 
 .loading-dots .loading-dot:first-child{
-  margin: 0 2px 0 0;
+  margin: 0 0 0 0;
 }
 
 .loading-dots .loading-dot:last-child{
-  margin: 0 0 0 2px;
+  margin: 0 0 0 0;
 }
 
+
+.active .loading-dot{
+  background-color: #196BFA
+}
 
 .active .loading-dot.loading-dot--1{
   -webkit-animation: animateDot @easing;
@@ -69,26 +98,26 @@ body {
 .active .loading-dot.loading-dot--2{
   -webkit-animation: animateDot @easing;
   -webkit-animation-fill-mode: forwards;
-  -webkit-animation-delay: .1s;
+  -webkit-animation-delay: .08s;
   -webkit-animation-iteration-count: infinite;
 }
 
 .active .loading-dot.loading-dot--3{
   -webkit-animation: animateDot @easing;
   -webkit-animation-fill-mode: forwards;
-  -webkit-animation-delay: .2s;
+  -webkit-animation-delay: .16s;
   -webkit-animation-iteration-count: infinite;
 }
 
 
 @-webkit-keyframes animateDot {
-  30% {
+  20% {
     transform: scale(1)
   }
-  60% {
-    transform: scale(.6)
+  40% {
+    transform: scale(1) translate3d(0, 6px, 0);
   }
   100% {
-    transform: scale(.6)
+    transform: scale(1)  translate3d(0, 0, 0)
   }
 }

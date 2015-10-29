@@ -23,7 +23,11 @@ var Prototype = React.createClass({
   },
 
   render: function() {
+<<<<<<< HEAD
     return <Errors/>
+=======
+    return <Loading/>
+>>>>>>> 552fcf183c2c10797f2b612f00f4cfedb25e9cac
   }
 });
 

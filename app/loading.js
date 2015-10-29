@@ -1,5 +1,5 @@
 let React = require('react');
-let iconStyles = require("./less/loading2.less");
+let iconStyles = require("./less/loading.less");
 
 
 let Item = React.createClass({
@@ -17,10 +17,16 @@ let Item = React.createClass({
     return (
       <div>
         <div className="loading-wrap">
-          <div className="loading-dots">
-            <div className="loading-dot loading-dot--1"></div>
-            <div className="loading-dot loading-dot--2"></div>
-            <div className="loading-dot loading-dot--3"></div>
+          <div className="loading-button" onClick={playAnimation}>
+
+            <div className="loading-button-caption">Загрузить еще</div>
+
+            <div className="loading-dots">
+              <div className="loading-dot loading-dot--1"></div>
+              <div className="loading-dot loading-dot--2"></div>
+              <div className="loading-dot loading-dot--3"></div>
+            </div>
+
           </div>
         </div>
 
