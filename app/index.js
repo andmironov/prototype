@@ -1,10 +1,5 @@
 let React = require("react");
-//let Checkout = require("./checkout.js");
-//let Icon = require("./icon.js");
-//let Settings = require("./settings.js");
-//let Loading = require("./loading.js");
-//let Share = require("./share.js");
-let Errors = require("./errors.js");
+let Chat = require("./prototypes/chat/chat.js");
 
 function getItemsState() {
   return {}
@@ -24,7 +19,7 @@ var Prototype = React.createClass({
 
   render: function() {
 
-    return <Errors/>
+    return <Chat/>
   }
 });
 

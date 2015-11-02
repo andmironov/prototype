@@ -1,4 +1,4 @@
-let Dispatcher = require("../Dispatcher.js");
+let Dispatcher = require(".../Dispatcher.js");
 let ItemConstants = require("../constants/ItemConstants.js");
 let EventEmitter = require('events').EventEmitter;
 let AppDispatcher = new Dispatcher();

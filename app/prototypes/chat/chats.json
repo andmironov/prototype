@@ -1,0 +1,16 @@
+{
+  "chats": [
+    {
+      "name": "Charlie Isslander",
+      "text": "Hello again!"
+    },
+    {
+      "source": "Trenton Johnes",
+      "text": "How are you"
+    },
+    {
+      "source": "Kerem Suer",
+      "text": "Nice shot, man!"
+    }
+  ]
+}
