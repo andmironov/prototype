@@ -13,7 +13,7 @@
 
 "use strict";
 
-var invariant = require('./invariant');
+var invariant = require('./Invariant');
 
 var _prefix = 'ID_';
 

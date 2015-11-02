@@ -5,11 +5,11 @@
       "text": "Hello again!"
     },
     {
-      "source": "Trenton Johnes",
+      "name": "Trenton Johnes",
       "text": "How are you"
     },
     {
-      "source": "Kerem Suer",
+      "name": "Kerem Suer",
       "text": "Nice shot, man!"
     }
   ]

@@ -1,5 +1,5 @@
 let React = require("react");
-let Chat = require("./prototypes/chat/chat.js");
+let Chat = require("./prototypes/messenger/Messenger.js");
 
 function getItemsState() {
   return {}
