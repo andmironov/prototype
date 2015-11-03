@@ -13,7 +13,6 @@ let chatData = {
 
 let React = require('react');
 let Styles = require("./messengerStyles.less");
-
 let ChatList = require("./ChatList.js");
 let SingleChat = require("./SingleChat.js");
 let MessengerControls = require("./MessengerControls.js");
@@ -23,14 +22,12 @@ let Messenger = React.createClass({
 
   getInitialState: function() {
     return {
-      chatIsExpanded: false,
-      expandedChatID: null
-      //showSingleChat: false
+      expandedChatID: 1
     }
   },
 
-  showChat: function() {
-    //this.setState({showSingleChat: true});
+  expandChat: function(id) {
+    this.setState({expandedChatID: id});
   },
 
   render: function() {
@@ -38,8 +35,7 @@ let Messenger = React.createClass({
       <div>
         <div className="messenger-wrap">
           <MessengerHeader/>
-          <ChatList chatData={chatData} showChat={this.showChat}/>
-          <SingleChat/>
+          <ChatList expandedChatID={this.state.expandedChatID} chatData={chatData} expandChat={this.expandChat}/>
         </div>
         <MessengerControls/>
       </div>

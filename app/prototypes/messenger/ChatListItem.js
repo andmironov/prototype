@@ -3,23 +3,23 @@ let classNames = require('classnames');
 
 let ChatListItem = React.createClass({
 
-
-  getInitialState: function() {
-    return { chatListItemExpanded: false }
-  },
-
   onClick: function() {
-    this.setState({chatListItemExpanded: true});
-    this.props.showChat();
+    this.props.expandChat(this.props.id);
   },
 
   render: function() {
+
+    var itemClass = classNames({
+      'messenger-chatlist-item': true,
+      'messenger-chatlist-item--expanded': this.props.isExpanded,
+    });
+
     var imageStyle = {
       backgroundImage: "url(" + this.props.imageUrl + ")",
     };
 
     return (
-      <div className="messenger-chatlist-item" onClick={this.onClick}>
+      <div key={this.props.id} className={itemClass} onClick={this.onClick}>
         <div className="chatlist-item-wrap">
           <div className="chatlist-item-image" style={imageStyle}></div>
           <div className="chatlist-item-textWrap">

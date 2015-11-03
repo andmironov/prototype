@@ -1,15 +1,14 @@
 let React = require('react');
 let ChatListItem = require('./ChatListItem');
-let request = require("superagent");
 
 let ChatList = React.createClass({
 
   render: function() {
-    var showChat = this.props.showChat;
-    var chatItems = this.props.chatData.chats.map(function(chatItem){
-        return (
-          <ChatListItem showChat={showChat} key={chatItem.name} name={chatItem.name} imageUrl={chatItem.imageUrl} text={chatItem.text} />
-        );
+    let expandedChatID = this.props.expandedChatID;
+    let expandChat = this.props.expandChat;
+
+    let chatItems = this.props.chatData.chats.map(function(chatItem){
+        return <ChatListItem isExpanded={(expandedChatID == chatItem.id) ? true : false} expandChat={expandChat} id={chatItem.id} name={chatItem.name} imageUrl={chatItem.imageUrl} text={chatItem.text} />
     });
     return (
       <div className="messenger-chat-list">
