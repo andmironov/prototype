@@ -1,3 +1,16 @@
+let chatData = {
+  "chats": [
+    {"id":0, "name": "Brad Frost","text": "Hello again! Looking forward too meet you at the conference","imageUrl": "brad.png"},
+    {"id":1, "name": "Trent Walton","text": "How are you today, mate?","imageUrl": "trent.png"},
+    {"id":2, "name": "Tobias van Schneider","text": "Nice shot, man! I was wondering if you want to have some good time","imageUrl": "tobias.png"},
+    {"id":3, "name": "Dave Rupert","text": "Nice shot, man!","imageUrl": "dave.png"},
+    {"id":4, "name": "Paul Irish","text": "Hello again! Looking forward too meet you at the conference","imageUrl": "paul.png"},
+    {"id":5, "name": "Frank Chimero","text": "Nice shot, man!","imageUrl": "frank.png"},
+    {"id":6, "name": "Christophe Tauziet","text": "Hello again! Looking forward too meet you at the conference","imageUrl": "chris.png"
+    }
+  ]
+}
+
 let React = require('react');
 let Styles = require("./messengerStyles.less");
 
@@ -9,11 +22,15 @@ let MessengerHeader = require("./MessengerHeader.js");
 let Messenger = React.createClass({
 
   getInitialState: function() {
-    return { showSingleChat: false };
+    return {
+      chatIsExpanded: false,
+      expandedChatID: null
+      //showSingleChat: false
+    }
   },
 
   showChat: function() {
-    this.setState({showSingleChat: true});
+    //this.setState({showSingleChat: true});
   },
 
   render: function() {
@@ -22,7 +39,7 @@ let Messenger = React.createClass({
         <div className="messenger-wrap">
           <MessengerHeader/>
           <ChatList chatData={chatData} showChat={this.showChat}/>
-          {this.state.showSingleChat ? <SingleChat/> : null}
+          <SingleChat/>
         </div>
         <MessengerControls/>
       </div>
@@ -31,16 +48,3 @@ let Messenger = React.createClass({
 });
 
 module.exports = Messenger;
-
-let chatData = {
-  "chats": [
-    {"name": "Brad Frost","text": "Hello again! Looking forward too meet you at the conference","imageUrl": "brad.png"},
-    {"name": "Trent Walton","text": "How are you today, mate?","imageUrl": "trent.png"},
-    {"name": "Tobias van Schneider","text": "Nice shot, man! I was wondering if you want to have some good time","imageUrl": "tobias.png"},
-    {"name": "Dave Rupert","text": "Nice shot, man!","imageUrl": "dave.png"},
-    {"name": "Paul Irish","text": "Hello again! Looking forward too meet you at the conference","imageUrl": "paul.png"},
-    {"name": "Frank Chimero","text": "Nice shot, man!","imageUrl": "frank.png"},
-    {"name": "Christophe Tauziet","text": "Hello again! Looking forward too meet you at the conference","imageUrl": "chris.png"
-    }
-  ]
-}

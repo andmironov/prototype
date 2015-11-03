@@ -4,24 +4,9 @@ let request = require("superagent");
 
 let ChatList = React.createClass({
 
-  getInitialState: function() {
-    return {chatData: []};
-  },
-
-  componentDidMount: function() {
-    request
-      .get("./chatData.json")
-      .end((err, res) => {
-        if(err) console.error(err);
-        if (this.isMounted()) {
-          this.setState({chatData: res.body.chats});
-        }
-      });
-  },
-
   render: function() {
     var showChat = this.props.showChat;
-    var chatItems = this.state.chatData.map(function(chatItem){
+    var chatItems = this.props.chatData.chats.map(function(chatItem){
         return (
           <ChatListItem showChat={showChat} key={chatItem.name} name={chatItem.name} imageUrl={chatItem.imageUrl} text={chatItem.text} />
         );
