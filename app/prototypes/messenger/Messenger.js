@@ -1,5 +1,5 @@
 let React = require('react');
-let Styles = require("./messenger.less");
+let Styles = require("./messengerStyles.less");
 
 let ChatList = require("./ChatList.js");
 let SingleChat = require("./SingleChat.js");

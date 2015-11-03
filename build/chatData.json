@@ -1,16 +1,34 @@
 {
   "chats": [
     {
-      "name": "Charlie Isslander",
-      "text": "Hello again!"
+      "name": "Brad Frost",
+      "text": "Hello again!",
+      "imageUrl": "brad.png"
     },
     {
-      "name": "Trenton Johnes",
-      "text": "How are you"
+      "name": "Trent Walton",
+      "text": "How are you",
+      "imageUrl": "trent.png"
     },
     {
-      "name": "Kerem Suer",
-      "text": "Nice shot, man!"
+      "name": "Tobias van Schneider",
+      "text": "Nice shot, man!",
+      "imageUrl": "tobias.png"
+    },
+    {
+      "name": "Dave Rupert",
+      "text": "Nice shot, man!",
+      "imageUrl": "dave.png"
+    },
+    {
+      "name": "Paul Irish",
+      "text": "Nice shot, man!",
+      "imageUrl": "paul.png"
+    },
+    {
+      "name": "Frank Chimero",
+      "text": "Nice shot, man!",
+      "imageUrl": "frank.png"
     }
   ]
 }

@@ -26,7 +26,7 @@ let ChatList = React.createClass({
         );
     })
     return (
-      <div className="messenger-chatlist">
+      <div className="messenger-chat-list">
         {chatsItems}
       </div>
     )
