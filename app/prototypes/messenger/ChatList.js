@@ -20,14 +20,15 @@ let ChatList = React.createClass({
   },
 
   render: function() {
-    var chatsItems = this.state.chatData.map(function(chatItem){
+    var showChat = this.props.showChat;
+    var chatItems = this.state.chatData.map(function(chatItem){
         return (
-          <ChatListItem key={chatItem.text} name={chatItem.name} text={chatItem.text}/>
+          <ChatListItem showChat={showChat} key={chatItem.name} name={chatItem.name} imageUrl={chatItem.imageUrl} text={chatItem.text} />
         );
-    })
+    });
     return (
       <div className="messenger-chat-list">
-        {chatsItems}
+        {chatItems}
       </div>
     )
   }

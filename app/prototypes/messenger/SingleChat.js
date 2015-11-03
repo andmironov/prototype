@@ -5,7 +5,7 @@ let SingleChat = React.createClass({
 
     return (
       <div className="messenger-single-chat">
-
+        helloo SingleChat
       </div>
     )
   }
