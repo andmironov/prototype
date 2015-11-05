@@ -1,7 +1,5 @@
 @bouncyEasing: .6s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-@easing: .5s ease;
-
-@hideEasing: .4s ease;
+@regularEasing: .3s ease;
 
 //Colors 1
 @bgColor: #E4EFF4;
@@ -118,10 +116,8 @@ body {
   width: 375px;
   height: 600px;
   transform: translate3d(0, 0, 0);
-  transition: all .6s ease;
   position: relative;
 }
-
 
 .messenger-chatlist-item {
   height: 75px;
@@ -132,15 +128,16 @@ body {
   padding: 0 15px 0 15px;
   margin: 0 0 10px 0;
   transform: translate3d(0, 0, 0);
-  transition: all .3s ease;
+  transition: transform @regularEasing, opacity @regularEasing;
 }
+
 .messenger-chatlist-item--isOnline:after {
   content: "";
   position: absolute;
 }
 
 .messenger-chat-list--hidden .messenger-chatlist-item {
-  transform: translate3d(-40%, 0, 0) scale(1);
+  transform: translate3d(-30%, 0, 0) scale(1);
   opacity: 0;
 }
 
@@ -153,13 +150,9 @@ body {
   display: flex;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: all .6s ease;
   opacity: 0;
 }
 
-.messenger-chat-images {
-  position: absolute;
-}
 
 .messenger-chat-image {
   border: 2px solid #FFFFFF;
@@ -170,7 +163,7 @@ body {
   display: flex;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: transform .4s ease;
+  transition: transform @regularEasing;
   position: absolute;
   z-index: 999;
   display: block;
@@ -182,18 +175,19 @@ body {
 
 .messenger-chat-image.messenger-chat-image--shown  {
   opacity: 1;
-  transform: scale(.8) translate3d(470px, 3px, 0);
+  transform: scale(.8) translate3d(475px, 3px, 0);
 }
 
 .messenger-chat-images {
   position: absolute;
   z-index: 999;
   transform: translate3d(0, 0, 0);
-  transition: transform .3s ease
+  transition: transform @regularEasing;
 }
 
 .messenger-chat-images.messenger-chat-images--hidden {
-  transform: translate3d(-70px, 0, 0);
+  transform: translate3d(-75px, 0, 0);
+  transition-delay: .1s;
 }
 
 .messenger-chat-image--1{
@@ -248,15 +242,18 @@ body {
   height: 600px;
   display: flex;
   flex-direction: column;
-  transition: transform .6s ease, opacity .6s ease;
+  transition: transform @regularEasing, opacity @regularEasing;
 }
 
 .messenger-single-chat.messenger-single-chat--hidden {
-  transform: translate3d(100%, 0, 0);
+  transform: translate3d(30%, 0, 0);
+  opacity: 0;
 }
+
 
 .messenger-single-chat.messenger-single-chat--shown {
   transform: translate3d(0, 0, 0);
+  opacity: 1
 }
 
 .messenger-textInput {
@@ -295,7 +292,7 @@ body {
   max-width: 260px;
   margin: 5px 0;
   transform: translate3d(0, 0, 0) scale(1);
-  transition: transform .4s ease-out;
+  transition: transform @regularEasing, opacity @regularEasing;
 }
 
 .messenger-message-text {
@@ -329,12 +326,14 @@ body {
 
 .messenger-message.messenger-message--incoming{
   align-self: flex-start;
-  transform: translate3d(70%, -0%, 0) scale(1) rotate(0deg);
+  transform: translate3d(10%, -0%, 0) scale(1) rotate(0deg);
+  transition-delay: .1s;
 }
 
 .messenger-message.messenger-message--outgoing {
   align-self: flex-end;
-  transform: translate3d(10%, -0%, 0) scale(1) rotate(0deg);
+  transform: translate3d(0%, -0%, 0) scale(1) rotate(0deg);
+
 }
 
 .messenger-single-chat--shown .messenger-message.messenger-message--incoming,
