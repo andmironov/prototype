@@ -4,10 +4,17 @@ let classNames = require('classnames');
 let MessengerHeader = React.createClass({
 
   render: function() {
+    var chatName = "";
+    if(this.props.expandedChatID) var chatName = this.props.chatData.chats[this.props.expandedChatID - 1].name;
 
       var titleClass = classNames({
         'messenger-header-title': true,
         'messenger-header-title--hidden': this.props.expandedChatID,
+      });
+
+      var chatNameClass = classNames({
+        'messenger-header-chatName': true,
+        'messenger-header-chatName--hidden': !this.props.expandedChatID,
       });
 
       var iconClass = classNames({
@@ -24,6 +31,7 @@ let MessengerHeader = React.createClass({
           <div className="line line-3"></div>
         </div>
         <div className={titleClass}>Chats</div>
+        <div className={chatNameClass}>{chatName}</div>
       </div>
     )
   }

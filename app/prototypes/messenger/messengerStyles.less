@@ -1,5 +1,5 @@
-@bouncyEasing: .6s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-@regularEasing: .3s ease;
+@bouncyEasing: .6s  cubic-bezier(0.470, 0.000, 0.060, 1.210);
+@regularEasing: .4s ease;
 
 //Colors 1
 @bgColor: #E4EFF4;
@@ -54,15 +54,23 @@ body {
   border-radius: 5px 5px 0px 0px;
 }
 
-.messenger-header-title {
+.messenger-header-title, .messenger-header-chatName {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  top: 0;
+  margin: 0 0 0 -100px;
   font-size: 16px;
+  height: 63px;
   line-height: 63px;
   text-align: center;
+  transform: translate3d(0, 0, 0);
   transition: all .6s ease;
 }
 
-.messenger-header-title--hidden {
+.messenger-header-title--hidden, .messenger-header-chatName--hidden {
   opacity: 0;
+  transform: translate3d(-30px, 0, 0);
 }
 
 .messenger-header-icon {
@@ -153,7 +161,6 @@ body {
   opacity: 0;
 }
 
-
 .messenger-chat-image {
   border: 2px solid #FFFFFF;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.28);
@@ -163,7 +170,7 @@ body {
   display: flex;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: transform @regularEasing;
+  transition: transform @bouncyEasing;
   position: absolute;
   z-index: 999;
   display: block;
@@ -327,7 +334,7 @@ body {
 .messenger-message.messenger-message--incoming{
   align-self: flex-start;
   transform: translate3d(10%, -0%, 0) scale(1) rotate(0deg);
-  transition-delay: .1s;
+  transition-delay: .16s;
 }
 
 .messenger-message.messenger-message--outgoing {

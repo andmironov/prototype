@@ -63,7 +63,7 @@ let Messenger = React.createClass({
         <div className="messenger-wrap">
           <div className="messenger-wrap-inner">
             <MessengerImages expandedChatID={this.state.expandedChatID} chatData={chatData}/>
-            <MessengerHeader closeChat={this.closeChat} expandedChatID={this.state.expandedChatID}/>
+            <MessengerHeader closeChat={this.closeChat} expandedChatID={this.state.expandedChatID}  chatData={chatData}/>
             <ChatList expandedChatID={this.state.expandedChatID} chatData={chatData} expandChat={this.expandChat}/>
             <SingleChat expandedChatID={this.state.expandedChatID} messagesData={messagesData} />
           </div>
