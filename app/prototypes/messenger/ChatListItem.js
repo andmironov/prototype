@@ -8,25 +8,27 @@ let ChatListItem = React.createClass({
   },
 
   render: function() {
+    var itemUniqueClassName = 'messenger-chatlist-item--' + this.props.id;
 
-    var itemClass = classNames({
+    var itemClass = classNames(itemUniqueClassName, {
       'messenger-chatlist-item': true,
+      'messenger-chatlist-item--isOnline': this.props.isOnline,
       'messenger-chatlist-item--expanded': this.props.isExpanded,
+      'messenger-chatlist-item--listed': !this.props.isExpanded
     });
+
 
     var imageStyle = {
       backgroundImage: "url(" + this.props.imageUrl + ")",
     };
 
     return (
-      <div key={this.props.id} className={itemClass} onClick={this.onClick}>
-        <div className="chatlist-item-wrap">
+      <div className={itemClass} onClick={this.onClick}>
           <div className="chatlist-item-image" style={imageStyle}></div>
           <div className="chatlist-item-textWrap">
-            <div className="chatlist-item-name">{this.props.name}</div>
-            <div className="chatlist-item-text">{this.props.text}</div>
-            </div>
-        </div>
+                <div className="chatlist-item-name">{this.props.name}</div>
+                <div className="chatlist-item-text">{this.props.text}</div>
+          </div>
       </div>
     )
   }
