@@ -12,9 +12,14 @@ let ChatListItem = React.createClass({
 
     var itemClass = classNames(itemUniqueClassName, {
       'messenger-chatlist-item': true,
-      'messenger-chatlist-item--isOnline': this.props.isOnline,
       'messenger-chatlist-item--expanded': this.props.isExpanded,
       'messenger-chatlist-item--listed': !this.props.isExpanded
+    });
+
+    var timeClass = classNames({
+      'chatlist-item-time': true,
+      'chatlist-item-time--seen': this.props.deliveryStatus == "seen",
+      'chatlist-item-time--delivered': this.props.deliveryStatus == "delivered",
     });
 
 
@@ -28,6 +33,7 @@ let ChatListItem = React.createClass({
           <div className="chatlist-item-textWrap">
                 <div className="chatlist-item-name">{this.props.name}</div>
                 <div className="chatlist-item-text">{this.props.text}</div>
+                <div className={timeClass}>{this.props.time}</div>
           </div>
       </div>
     )

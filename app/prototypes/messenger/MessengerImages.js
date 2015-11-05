@@ -8,8 +8,8 @@ let MessengerImages = React.createClass({
 
 
   render: function() {
-    let expandedChatID =this.props.expandedChatID
-
+    let expandedChatID = this.props.expandedChatID;
+    
     var imageWrapClass = classNames({
       'messenger-chat-images': true,
       'messenger-chat-images--shown': !expandedChatID,
@@ -23,6 +23,7 @@ let MessengerImages = React.createClass({
         'messenger-chat-image': true,
         'messenger-chat-image--shown': expandedChatID == chatItem.id,
         'messenger-chat-image--listed': !expandedChatID,
+        'messenger-chat-image--isOnline': chatItem.status,
         'messenger-chat-image--hidden': expandedChatID && expandedChatID !== chatItem.id
       });
 

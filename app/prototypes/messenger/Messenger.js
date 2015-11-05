@@ -1,11 +1,11 @@
 let chatData = {
   "chats": [
-    {"id":1, "status": "online", "name": "Brad Frost","text": "Hello again! Looking forward too meet you at the conference","imageUrl": "brad.png"},
-    {"id":2, "status": false, "name": "Trent Walton","text": "How are you today, mate?","imageUrl": "trent.png"},
-    {"id":3, "status": false, "name": "Tobias van Schneider","text": "Nice shot, man! I was wondering if you want to have some good time","imageUrl": "tobias.png"},
-    {"id":4, "status": false, "name": "Dave Rupert","text": "Nice shot, man!","imageUrl": "dave.png"},
-    {"id":5, "status": "online", "name": "Paul Irish","text": "Hello again! Looking forward too meet you at the conference","imageUrl": "paul.png"},
-    {"id":6, "status": false, "name": "Frank Chimero","text": "Nice shot, man!","imageUrl": "frank.png"}
+    {"id":1, "status": "online", "deliveryStatus":false, "time":"15:30", "name": "Brad Frost","text": "Hello again! Looking forward too meet you at the conference","imageUrl": "brad.png"},
+    {"id":2, "status": false, "deliveryStatus":"seen", "time":"11:12","name": "Trent Walton","text": "How are you today, mate?","imageUrl": "trent.png"},
+    {"id":3, "status": false, "deliveryStatus":"seen", "time":"8:30", "name": "Tobias van Schneider","text": "Nice shot, man! I was wondering if you want to have some good time","imageUrl": "tobias.png"},
+    {"id":4, "status": false, "deliveryStatus":false, "time":"THU", "name": "Dave Rupert","text": "Nice shot, man!","imageUrl": "dave.png"},
+    {"id":5, "status": "online", "deliveryStatus":false, "time":"THU", "name": "Paul Irish","text": "Hello again! Looking forward too meet you at the conference","imageUrl": "paul.png"},
+    {"id":6, "status": false, "deliveryStatus":"delivered",  "time":"MON", "name": "Frank Chimero","text": "Nice shot, man!","imageUrl": "frank.png"}
   ]
 }
 
@@ -13,7 +13,7 @@ let messagesData = {
   "messageGroups": [
     {"id":0, "date":"Oct 15th", "messages":
       [
-        {"id":1, "type": "incoming", "status": "Seen", "text": "Hello again! Looking forward too meet you at the conference"},
+        {"id":1, "type": "incoming", "status": false, "text": "Hello again! Looking forward too meet you at the conference"},
         {"id":2, "type": "incoming", "status": false, "text": "Hello again! Looking forward too meet you at the conference"}
       ]
     },
@@ -68,7 +68,8 @@ let Messenger = React.createClass({
             <SingleChat expandedChatID={this.state.expandedChatID} messagesData={messagesData} />
           </div>
         </div>
-        <MessengerControls/>
+        <div className="messenger-shadow"></div>
+        <MessengerControls expandChat={this.expandChat} closeChat={this.closeChat}/>
       </div>
     )
   }

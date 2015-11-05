@@ -24,6 +24,9 @@ let SingleChat = React.createClass({
           {messageGroups}
         </div>
         <div className="messenger-textInput">
+          <div className="messenger-textInput-icon messenger-textInput-icon--mic"></div>
+          <div className="messenger-textInput-icon messenger-textInput-icon--smile"></div>
+          <div className="messenger-textInput-icon messenger-textInput-icon--att"></div>
           Your message
         </div>
       </div>

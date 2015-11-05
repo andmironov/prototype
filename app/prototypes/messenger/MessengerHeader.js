@@ -5,7 +5,8 @@ let MessengerHeader = React.createClass({
 
   render: function() {
     var chatName = "";
-    if(this.props.expandedChatID) var chatName = this.props.chatData.chats[this.props.expandedChatID - 1].name;
+    //if(this.props.expandedChatID) var chatName = this.props.chatData.chats[this.props.expandedChatID - 1].name;
+    var chatName = "Trent Walton"
 
       var titleClass = classNames({
         'messenger-header-title': true,
@@ -30,8 +31,13 @@ let MessengerHeader = React.createClass({
           <div className="line line-2"></div>
           <div className="line line-3"></div>
         </div>
+
         <div className={titleClass}>Chats</div>
-        <div className={chatNameClass}>{chatName}</div>
+
+        <div className={chatNameClass}>
+          <div className="messenger-header-chatName-name">{chatName}</div>
+          <div className="messenger-header-chatName-status">Last seen just now</div>
+        </div>
       </div>
     )
   }

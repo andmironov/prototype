@@ -1,13 +1,28 @@
 let React = require('react');
 
 let MessengerControls = React.createClass({
-  render: function() {
-    function showChat(){
 
-    };
+
+      expandChatOne: function (){
+        this.props.expandChat(1);
+      },
+
+      expandChatTwo: function (){
+        this.props.expandChat(2);
+      },
+
+      closeChat: function (){
+        this.props.closeChat();
+      },
+
+  render: function() {
 
     return (
-      <div className="controls"><button onClick={showChat}>showChat</button></div>
+      <div className="controls">
+        <button onClick={this.expandChatOne}>expandChatOne</button><br/>
+        <button onClick={this.closeChat}>closeChat</button><br/>
+        <button onClick={this.expandChatTwo}>expandChatTwo</button><br/>
+      </div>
     )
   }
 });
