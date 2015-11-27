@@ -3,6 +3,7 @@ let Prototype = require("./prototypes/countdown/Countdown.js");
 
 function getItemsState() {
   return {}
+
 }
 
 var App = React.createClass({

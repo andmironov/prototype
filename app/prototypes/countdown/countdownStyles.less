@@ -18,11 +18,97 @@ body {
   background-color: @bgColor;
   color: @mainTextColor;
   margin: 30px;
-  font-family: Avenir-Medium;
+  font-family: "Gotham Pro";
 }
 
 .controls {
   position: absolute;
   left: 20px;
   top: 20px;
+}
+
+.bubbles-wrap {
+  width: 375px;
+  height: 667px;
+  margin:  0 auto;
+  position: relative;
+  top: 10px;
+  background-color: yellow;
+}
+
+.bubbles-inner {
+  width: 375px;
+  height: 667px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  text-align: center;
+  top:0;
+  left: 0;
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  transform: translate3d(0, 0, 0);
+  /* Mask: */
+  //background-image: radial-gradient(50% 100%, #67D6DD 93%, #C8EFF1 53%, #C8EFF1 93%);
+}
+
+.bubble-value {
+  font-size: 33px;
+}
+
+.bubble-unit {
+  text-transform: uppercase;
+  letter-spacing: 1.4;
+  font-size: 10px
+}
+
+
+.bubble.bubble--size-1 {
+  width: 66px;
+  height: 66px;
+}
+.bubble.bubble--size-1 .bubble-value{
+  font-size: 20px
+}
+.bubble.bubble--size-1 .bubble-unit {
+  letter-spacing: 1;
+  font-size: 8px
+}
+
+.bubble.bubble--size-2 {
+  width: 100px;
+  height: 100px;
+}
+.bubble.bubble--size-2 .bubble-value{
+  font-size: 33px
+}
+.bubble.bubble--size-2 .bubble-unit {
+  font-size: 10px
+}
+
+.bubble.bubble--size-3 {
+  width: 120px;
+  height: 120px;
+}
+.bubble.bubble--size-3 .bubble-value{
+  font-size: 39px
+}
+.bubble.bubble--size-3 .bubble-unit {
+  font-size: 11px
+}
+
+.bubble.bubble--size-4 {
+  width: 132px;
+  height: 132px;
+}
+.bubble.bubble--size-4 .bubble-value{
+  font-size: 44px
+}
+.bubble.bubble--size-4 .bubble-unit {
+  font-size: 11px
 }
