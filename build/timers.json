@@ -4,6 +4,9 @@
     {"id":1, "size":2, "isOpened": false, "value": 30},
     {"id":2, "size":3, "isOpened": false, "value": 45},
     {"id":3, "size":4, "isOpened": false, "value": 20},
-    {"id":4, "size":2, "isOpened": false, "value": 15}
+    {"id":4, "size":2, "isOpened": false, "value": 15},
+    {"id":5, "size":2, "isOpened": false, "value": 5},
+    {"id":6, "size":2, "isOpened": false, "value": 35},
+    {"id":7, "size":2, "isOpened": false, "value": 25}
   ]
 }
