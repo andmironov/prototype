@@ -1,11 +1,11 @@
 let React = require("react");
-let Chat = require("./prototypes/messenger/Messenger.js");
+let Prototype = require("./prototypes/countdown/Countdown.js");
 
 function getItemsState() {
   return {}
 }
 
-var Prototype = React.createClass({
+var App = React.createClass({
 
   getInitialState: function() {
     return {}
@@ -19,9 +19,10 @@ var Prototype = React.createClass({
 
   render: function() {
 
-    return <Chat/>
+    return <Prototype/>
   }
 });
 
-React.render(<Prototype name="John" />, document.querySelectorAll(".app")[0]);
-module.exports = Prototype;
+React.render(<App/>, document.querySelectorAll(".app")[0]);
+
+module.exports = App;

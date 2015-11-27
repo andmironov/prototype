@@ -21,7 +21,6 @@ let MessengerControls = React.createClass({
       <div className="controls">
         <button onClick={this.expandChatOne}>expandChatOne</button><br/>
         <button onClick={this.closeChat}>closeChat</button><br/>
-        <button onClick={this.expandChatTwo}>expandChatTwo</button><br/>
       </div>
     )
   }

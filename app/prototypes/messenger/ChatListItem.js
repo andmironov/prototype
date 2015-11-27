@@ -22,6 +22,11 @@ let ChatListItem = React.createClass({
       'chatlist-item-time--delivered': this.props.deliveryStatus == "delivered",
     });
 
+    var hasNewClass = classNames({
+      'chatlist-item-hasNew': true,
+      'chatlist-item-hasNew--hidden': !this.props.hasNew,
+    });
+
 
     var imageStyle = {
       backgroundImage: "url(" + this.props.imageUrl + ")",
@@ -34,6 +39,7 @@ let ChatListItem = React.createClass({
                 <div className="chatlist-item-name">{this.props.name}</div>
                 <div className="chatlist-item-text">{this.props.text}</div>
                 <div className={timeClass}>{this.props.time}</div>
+                <div className={hasNewClass}>{this.props.hasNew}</div>
           </div>
       </div>
     )

@@ -18,10 +18,20 @@ let MessengerHeader = React.createClass({
         'messenger-header-chatName--hidden': !this.props.expandedChatID,
       });
 
+      var imageClass = classNames({
+        'messenger-header-image': true,
+        'messenger-header-image--hidden': !this.props.expandedChatID,
+      });
+
       var iconClass = classNames({
         'messenger-header-icon': true,
         'messenger-header-icon--ham': !this.props.expandedChatID,
         'messenger-header-icon--back': this.props.expandedChatID,
+      });
+
+      var userClass = classNames({
+        'messenger-header-user': true,
+        'messenger-header-user--hidden': this.props.expandedChatID,
       });
 
     return (
@@ -38,6 +48,9 @@ let MessengerHeader = React.createClass({
           <div className="messenger-header-chatName-name">{chatName}</div>
           <div className="messenger-header-chatName-status">Last seen just now</div>
         </div>
+
+        <div className={userClass}></div>
+        <div className={imageClass}></div>
       </div>
     )
   }

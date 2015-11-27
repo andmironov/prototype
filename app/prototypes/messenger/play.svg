@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15588) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval 113 + Triangle 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="iPhone-6-Copy-53" sketch:type="MSArtboardGroup" transform="translate(-537.000000, -263.000000)">
+            <g id="Group-Copy" sketch:type="MSLayerGroup" transform="translate(73.000000, 40.000000)">
+                <g id="Group" transform="translate(339.000000, 0.000000)" sketch:type="MSShapeGroup">
+                    <g id="Rectangle-15-Copy-4">
+                        <g id="Group" transform="translate(13.000000, 34.000000)">
+                            <g transform="translate(112.000000, 189.000000)" id="Oval-113-+-Triangle-1">
+                                <g>
+                                    <circle id="Oval-113" fill="#EC7262" cx="16.5" cy="16.5" r="16.5"></circle>
+                                    <path d="M14.6452071,21.9772246 C13.6961732,22.5420879 12.9268293,22.1064574 12.9268293,20.9972399 L12.9268293,12.0027601 C12.9268293,10.8966663 13.6947539,10.4570674 14.6452071,11.0227754 L22.1291832,15.4772246 C23.078217,16.0420879 23.0796363,16.9570674 22.1291832,17.5227754 L14.6452071,21.9772246 Z" id="Triangle-1" fill="#FFFFFF"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

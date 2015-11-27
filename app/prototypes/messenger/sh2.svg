@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="380px" height="562px" viewBox="0 0 380 562" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15588) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 60 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="13.5472197" in="SourceGraphic" result="blur"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="iPhone-6-Copy-53" sketch:type="MSArtboardGroup" transform="translate(-384.000000, -38.000000)" filter="url(#filter-1)" fill="#A59C7A" opacity="0.3">
+            <g id="Group-Copy" sketch:type="MSLayerGroup" transform="translate(73.000000, 40.000000)">
+                <rect id="Rectangle-60-Copy" sketch:type="MSShapeGroup" x="350" y="37" width="302" height="494"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

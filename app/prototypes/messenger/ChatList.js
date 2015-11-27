@@ -11,7 +11,7 @@ let ChatList = React.createClass({
     let expandChat = this.props.expandChat;
 
     let chatItems = this.props.chatData.chats.map(function(chatItem){
-        return <ChatListItem key={chatItem.id} isOnline={(chatItem.status == "online") ? true : false} isExpanded={(expandedChatID == chatItem.id) ? true : false} expandChat={expandChat} id={chatItem.id} name={chatItem.name} time={chatItem.time} deliveryStatus={chatItem.deliveryStatus} imageUrl={chatItem.imageUrl} text={chatItem.text} />
+        return <ChatListItem key={chatItem.id} isOnline={(chatItem.status == "online") ? true : false} isExpanded={(expandedChatID == chatItem.id) ? true : false} expandChat={expandChat} id={chatItem.id} hasNew={chatItem.hasNew} name={chatItem.name} time={chatItem.time} deliveryStatus={chatItem.deliveryStatus} imageUrl={chatItem.imageUrl} text={chatItem.text} />
     });
 
     var chatlistClass = classNames({
